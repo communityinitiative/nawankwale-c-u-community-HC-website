@@ -1,0 +1,216 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nawankwale C/U Community Health Centre</title>
+  <meta name="description" content="Nawankwale Community Health Centre - Affordable, accessible healthcare in Nabitende Subcounty, Iganga District." />
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
+    header, footer { background-color: #00695c; color: white; text-align: center; padding: 1rem 0; }
+    nav ul { list-style: none; display: flex; justify-content: center; padding: 0; margin: 0; background: #004d40; flex-wrap: wrap; }
+    nav ul li { margin: 0 15px; }
+    nav ul li a { color: white; text-decoration: none; padding: 10px; display: block; }
+    nav ul li a:hover { background: #00796b; }
+    a[href^="mailto:"] { color: #00695c; text-decoration: underline; }
+
+    .container { padding: 2rem; max-width: 1000px; margin: auto; }
+    h2 { color: #004d40; }
+    .services, .team, .gallery, .outreach, .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .card { background: #ffffff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); cursor: pointer; text-align: center; transition: transform 0.2s ease; }
+    .card:hover { transform: translateY(-5px); background-color: #f0f0f0; }
+    form { background: #ffffff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px; margin: auto; }
+    form label { display: block; margin-top: 0.75rem; }
+    form input, form textarea, form select { width: 100%; padding: 0.5rem; margin-top: 0.25rem; border: 1px solid #ccc; border-radius: 4px; }
+    form button { background: #00695c; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; margin-top: 1rem; cursor: pointer; }
+    form button:hover { background: #004d40; }
+    iframe { width: 100%; height: 300px; border: none; border-radius: 8px; margin-top: 1rem; }
+    a.card-link { text-decoration: none; color: inherit; }
+    section:not(.active-section) { display: none; }
+    section.active-section { animation: fadeIn 0.3s ease-in-out; }
+    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll("nav ul li a");
+      const dashboardLinks = document.querySelectorAll(".dashboard .card-link");
+
+      function showSection(id) {
+        sections.forEach(section => section.classList.remove("active-section"));
+        document.querySelector(id).classList.add("active-section");
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      navLinks.forEach(link => {
+        link.addEventListener("click", event => {
+          event.preventDefault();
+          showSection(link.getAttribute("href"));
+        });
+      });
+
+      dashboardLinks.forEach(link => {
+        link.addEventListener("click", event => {
+          event.preventDefault();
+          showSection(link.getAttribute("href"));
+        });
+      });
+
+      showSection("#home");
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Nawankwale C/U Community Health Centre</h1>
+    <p><em>"Health is Wealthy"</em></p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#outreach">Outreach</a></li>
+      <li><a href="#team">Our Team</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#jobs">Jobs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>We are committed to providing compassionate, quality healthcare to our community. Use the dashboard below to explore different sections of our facility.</p>
+      <div class="dashboard">
+        <a href="#about" class="card-link"><div class="card">📘 About Us</div></a>
+        <a href="#services" class="card-link"><div class="card">💉 Services</div></a>
+        <a href="#outreach" class="card-link"><div class="card">🚐 Outreach</div></a>
+        <a href="#team" class="card-link"><div class="card">👨‍⚕️ Our Team</div></a>
+        <a href="#gallery" class="card-link"><div class="card">🖼️ Gallery</div></a>
+        <a href="#jobs" class="card-link"><div class="card">💼 Jobs</div></a>
+        <a href="#contact" class="card-link"><div class="card">📞 Contact</div></a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Nawankwale C/U Community Health Centre is a non-profit medical facility providing quality, affordable, and compassionate care to residents of Nabitende Subcounty and beyond. Our mission is to serve the health needs of our community with integrity and dedication.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Outpatient Services</li>
+        <li>Diagnostic Services</li>
+        <li>Maternal Services</li>
+        <li>Youth Friendly Services</li>
+        <li>Inpatient Services</li>
+        <li>Minor Operations</li>
+        <li>Dental Services</li>
+        <li>Preventive Services</li>
+        <li>Rehabilitative Services</li>
+        <li>Cancer Screening Services</li>
+        <li>Epidemiological Surveillance Services</li>
+        <li>Prevention and Management of NTDs/HIV/TB Services</li>
+      </ul>
+    </section>
+
+    <section id="outreach">
+      <h2>Community Outreach</h2>
+      <p>We extend healthcare beyond our walls through health camps, immunization drives, and awareness programs targeting vulnerable populations.</p>
+    </section>
+
+    <section id="team">
+      <h2>Our Team</h2>
+      <div class="team">
+        <div class="card">
+          <h3>Kyeyala Nathan</h3>
+          <p>Senior Clinical Officer</p>
+          <p><em>Head Clinical Services</em></p>
+        </div>
+        <div class="card">
+          <h3>Kirya Moses</h3>
+          <p>Clinical Officer</p>
+          <p><em>Head Preventive Services</em></p>
+        </div>
+        <div class="card">
+          <h3>Balikitenda Paul</h3>
+          <p><em>Head Maternal Services</em></p>
+        </div>
+        <div class="card">
+          <h3>Kintu Yeko</h3>
+          <p>Administrator</p>
+          <p><em>Country Coordinator</em></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <p>Images from our facility and outreach programs will be showcased here soon.</p>
+    </section>
+
+    <section id="jobs">
+      <h2>Job Opportunities</h2>
+      <p>If you are interested in joining our team, please fill out the application form below.</p>
+      <form onsubmit="event.preventDefault(); alert('Your application has been received. Thank you!');">
+        <h3>Application Form</h3>
+        <label for="fullname">Full Name</label>
+        <input id="fullname" type="text" placeholder="Full Name" required>
+
+        <label for="email">Email Address</label>
+        <input id="email" type="email" placeholder="Email Address" required>
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" type="tel" placeholder="Phone Number" required>
+
+        <label for="position">Position you are applying for</label>
+        <select id="position" required>
+          <option value="">-- Select Position --</option>
+          <option value="Clinical Officer">Clinical Officer</option>
+          <option value="Nurse">Nurse</option>
+          <option value="Administrator">Administrator</option>
+          <option value="Midwife">Midwife</option>
+        </select>
+
+        <label for="about">Tell us about yourself and why you want to join</label>
+        <textarea id="about" rows="5" placeholder="Write your motivation here..." required></textarea>
+
+        <label for="cv">Upload CV (PDF/DOC/DOCX)</label>
+        <input id="cv" type="file" accept=".pdf,.doc,.docx">
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p><strong>Location:</strong> Nabitende Subcounty, Iganga District</p>
+      <p><strong>Email:</strong> <a href="mailto:info@nawankwalehc.org">info@nawankwalehc.org</a></p>
+      <p><strong>Phone:</strong> +256 773 854 297</p>
+
+      <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+        <h3>Send Us a Message</h3>
+        <label for="contact-name">Your Name</label>
+        <input id="contact-name" type="text" placeholder="Your Name" required>
+
+        <label for="contact-email">Your Email</label>
+        <input id="contact-email" type="email" placeholder="Your Email" required>
+
+        <label for="contact-message">Your Message</label>
+        <textarea id="contact-message" rows="4" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <iframe src="https://www.google.com/maps?q=Nabitende,+Uganda&output=embed" allowfullscreen></iframe>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Nawankwale C/U Community Health Centre. All rights reserved.</p>
+    <small>Health is Wealthy</small>
+  </footer>
+</body>
+</html>
