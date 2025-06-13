@@ -1,216 +1,273 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Nawankwale C/U Community Health Centre</title>
-  <meta name="description" content="Nawankwale Community Health Centre - Affordable, accessible healthcare in Nabitende Subcounty, Iganga District." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fafafa; }
-    header, footer { background-color: #00695c; color: white; text-align: center; padding: 1rem 0; }
-    nav ul { list-style: none; display: flex; justify-content: center; padding: 0; margin: 0; background: #004d40; flex-wrap: wrap; }
-    nav ul li { margin: 0 15px; }
-    nav ul li a { color: white; text-decoration: none; padding: 10px; display: block; }
-    nav ul li a:hover { background: #00796b; }
-    a[href^="mailto:"] { color: #00695c; text-decoration: underline; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
 
-    .container { padding: 2rem; max-width: 1000px; margin: auto; }
-    h2 { color: #004d40; }
-    .services, .team, .gallery, .outreach, .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
-    .card { background: #ffffff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); cursor: pointer; text-align: center; transition: transform 0.2s ease; }
-    .card:hover { transform: translateY(-5px); background-color: #f0f0f0; }
-    form { background: #ffffff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 600px; margin: auto; }
-    form label { display: block; margin-top: 0.75rem; }
-    form input, form textarea, form select { width: 100%; padding: 0.5rem; margin-top: 0.25rem; border: 1px solid #ccc; border-radius: 4px; }
-    form button { background: #00695c; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; margin-top: 1rem; cursor: pointer; }
-    form button:hover { background: #004d40; }
-    iframe { width: 100%; height: 300px; border: none; border-radius: 8px; margin-top: 1rem; }
-    a.card-link { text-decoration: none; color: inherit; }
-    section:not(.active-section) { display: none; }
-    section.active-section { animation: fadeIn 0.3s ease-in-out; }
-    @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+    header {
+      background: #e0f5f3;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #2a7b6f;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-style: italic;
+    }
+
+    nav {
+      background: #2a7b6f;
+      padding: 1em;
+      color: white;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    section {
+      display: none;
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+      border-bottom: 1px solid #eee;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #2a7b6f;
+    }
+
+    .button {
+      background-color: #2a7b6f;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    footer {
+      background-color: #2a7b6f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      background: #2a7b6f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll("nav ul li a");
-      const dashboardLinks = document.querySelectorAll(".dashboard .card-link");
-
-      function showSection(id) {
-        sections.forEach(section => section.classList.remove("active-section"));
-        document.querySelector(id).classList.add("active-section");
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-
-      navLinks.forEach(link => {
-        link.addEventListener("click", event => {
-          event.preventDefault();
-          showSection(link.getAttribute("href"));
-        });
-      });
-
-      dashboardLinks.forEach(link => {
-        link.addEventListener("click", event => {
-          event.preventDefault();
-          showSection(link.getAttribute("href"));
-        });
-      });
-
-      showSection("#home");
-    });
-  </script>
 </head>
 <body>
+
   <header>
     <h1>Nawankwale C/U Community Health Centre</h1>
     <p><em>"Health is Wealthy"</em></p>
   </header>
 
   <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#outreach">Outreach</a></li>
-      <li><a href="#team">Our Team</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#jobs">Jobs</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('services')">Services</a>
+    <a onclick="showSection('outreach')">Outreach</a>
+    <a onclick="showSection('team')">Team</a>
+    <a onclick="showSection('donate')">Donate</a>
+    <a onclick="showSection('jobs')">Jobs</a>
+    <a onclick="showSection('events')">Events</a>
+    <a onclick="showSection('history')">History</a>
+    <a onclick="showSection('reports')">Reports</a>
+    <a onclick="showSection('contact')">Contact</a>
   </nav>
 
-  <div class="container">
-    <section id="home">
-      <h2>Welcome</h2>
-      <p>We are committed to providing compassionate, quality healthcare to our community. Use the dashboard below to explore different sections of our facility.</p>
-      <div class="dashboard">
-        <a href="#about" class="card-link"><div class="card">📘 About Us</div></a>
-        <a href="#services" class="card-link"><div class="card">💉 Services</div></a>
-        <a href="#outreach" class="card-link"><div class="card">🚐 Outreach</div></a>
-        <a href="#team" class="card-link"><div class="card">👨‍⚕️ Our Team</div></a>
-        <a href="#gallery" class="card-link"><div class="card">🖼️ Gallery</div></a>
-        <a href="#jobs" class="card-link"><div class="card">💼 Jobs</div></a>
-        <a href="#contact" class="card-link"><div class="card">📞 Contact</div></a>
-      </div>
-    </section>
+  <section id="home" class="active">
+    <h2>Welcome to Nawankwale C/U Community Health Centre</h2>
+    <p>Welcome to Nawankwale C/U Community Health Centre — a lifeline of hope, healing, and care for the people of Nabitende Sub county, Iganga District, in the heart of Busoga Region, Uganda. Together with the community, we are building a healthier future, one step at a time.</p>
+    <a class="button" onclick="showSection('donate')">Support Our Mission</a>
+  </section>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Nawankwale C/U Community Health Centre is a non-profit medical facility providing quality, affordable, and compassionate care to residents of Nabitende Subcounty and beyond. Our mission is to serve the health needs of our community with integrity and dedication.</p>
-    </section>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Nawankwale C/U Community Health Centre is a grassroots initiative located in Nabitende Sub county, Iganga District, Busoga Region, Uganda. Our mission is to provide affordable, accessible, and compassionate healthcare services to underserved communities.</p>
+    <p>The health Centre began as a community-driven project, relying heavily on local support to build a three-room structure. We have reached the shell and finishing stage but now face a financial crisis that threatens our progress.</p>
+    <p><strong>Vision:</strong> A healthy, empowered community where every person has access to essential healthcare services.</p>
+    <p><strong>Core Values:</strong> Compassion, Integrity, Community Empowerment, Equity, and Excellence.</p>
+  </section>
 
-    <section id="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li>Outpatient Services</li>
-        <li>Diagnostic Services</li>
-        <li>Maternal Services</li>
-        <li>Youth Friendly Services</li>
-        <li>Inpatient Services</li>
-        <li>Minor Operations</li>
-        <li>Dental Services</li>
-        <li>Preventive Services</li>
-        <li>Rehabilitative Services</li>
-        <li>Cancer Screening Services</li>
-        <li>Epidemiological Surveillance Services</li>
-        <li>Prevention and Management of NTDs/HIV/TB Services</li>
-      </ul>
-    </section>
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Outpatient consultations</li>
+      <li>Maternal and child health services (antenatal care, postnatal care, immunizations)</li>
+      <li>Family planning and reproductive health</li>
+      <li>Health education and awareness programs</li>
+      <li>Cancer screening</li>
+      <li>Diagnostic services</li>
+      <li>Youth friendly services</li>
+      <li>Environmental protection and climate</li>
+      <li>Epidemiological surveillance, research and reporting</li>
+      <li>Minor surgical procedures</li>
+    </ul>
+    <p><strong>Future Vision:</strong></p>
+    <ul>
+      <li>Inpatient care</li>
+      <li>Maternity and delivery services</li>
+      <li>Major surgical procedures</li>
+      <li>Expanded laboratory diagnostics</li>
+    </ul>
+  </section>
 
-    <section id="outreach">
-      <h2>Community Outreach</h2>
-      <p>We extend healthcare beyond our walls through health camps, immunization drives, and awareness programs targeting vulnerable populations.</p>
-    </section>
+  <section id="outreach">
+    <h2>Outreach & Impact</h2>
+    <ul>
+      <li>School health programs: hygiene education, deworming, menstrual hygiene awareness</li>
+      <li>Community sensitization on malaria prevention, sanitation, and nutrition</li>
+      <li>Vaccination outreach in remote areas</li>
+      <li>Collaborations with local and religious leaders for health advocacy</li>
+    </ul>
+  </section>
 
-    <section id="team">
-      <h2>Our Team</h2>
-      <div class="team">
-        <div class="card">
-          <h3>Kyeyala Nathan</h3>
-          <p>Senior Clinical Officer</p>
-          <p><em>Head Clinical Services</em></p>
-        </div>
-        <div class="card">
-          <h3>Kirya Moses</h3>
-          <p>Clinical Officer</p>
-          <p><em>Head Preventive Services</em></p>
-        </div>
-        <div class="card">
-          <h3>Balikitenda Paul</h3>
-          <p><em>Head Maternal Services</em></p>
-        </div>
-        <div class="card">
-          <h3>Kintu Yeko</h3>
-          <p>Administrator</p>
-          <p><em>Country Coordinator</em></p>
-        </div>
-      </div>
-    </section>
+  <section id="team">
+    <h2>Our Team</h2>
+    <h3>Management Board:</h3>
+    <ul>
+      <li>Kintu Yeko – Project Initiator / Country Coordinator / Administrator</li>
+      <li>Balikitenda Paul – Nurse and In-charge of Health Centre</li>
+      <li>Batukyaye Peter – Head Community Mobilization</li>
+      <li>Kugera Ivan Edward Dhamutudha – Secretary</li>
+      <li>Annet Busoga Musekwa – Treasurer</li>
+      <li>Kyagera Annet – Member</li>
+      <li>Mudoola Moses – Assistant Head Community Mobilization</li>
+    </ul>
+    <h3>Technical Staff Present:</h3>
+    <ul>
+      <li>Kyeyala Nathan – Senior Medical Clinical Officer</li>
+      <li>Kirya Moses – Clinical Officer</li>
+    </ul>
+  </section>
 
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <p>Images from our facility and outreach programs will be showcased here soon.</p>
-    </section>
+  <section id="donate">
+    <h2>Donate / Support Us</h2>
+    <p>Your donation will help us:</p>
+    <ul>
+      <li>Finish the health facility</li>
+      <li>Buy medical equipment and furniture</li>
+      <li>Hire and support qualified staff</li>
+      <li>Run community outreach and health programs</li>
+    </ul>
+    <p><strong>Support us through:</strong></p>
+    <ul>
+      <li>Mobile Money (MTN): +256 773854297</li>
+      <li>Bank Account: 9030006492397</li>
+    </ul>
+  </section>
 
-    <section id="jobs">
-      <h2>Job Opportunities</h2>
-      <p>If you are interested in joining our team, please fill out the application form below.</p>
-      <form onsubmit="event.preventDefault(); alert('Your application has been received. Thank you!');">
-        <h3>Application Form</h3>
-        <label for="fullname">Full Name</label>
-        <input id="fullname" type="text" placeholder="Full Name" required>
+  <section id="jobs">
+    <h2>Jobs</h2>
+    <p>Our job opportunities are advertised through websites, media, Newspaper and interested candidate are supposed to Apply online using the form below whenever are application are called :</p>
+    <form>
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="position" placeholder="Position Applied For" required>
+      <label>Upload CV: <input type="file" name="cv" accept=".pdf,.doc,.docx" required></label><br><br>
+      <label>Upload Supporting Document: <input type="file" name="supporting_docs" accept=".pdf,.jpg,.png,.doc,.docx"></label><br><br>
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
 
-        <label for="email">Email Address</label>
-        <input id="email" type="email" placeholder="Email Address" required>
+  <section id="events">
+    <h2>Events</h2>
+    <p>Stay tuned for upcoming health campaigns, outreach activities, and community mobilization events.</p>
+  </section>
 
-        <label for="phone">Phone Number</label>
-        <input id="phone" type="tel" placeholder="Phone Number" required>
+  <section id="history">
+    <h2>History</h2>
+    <p>The Nawankwale C/U Community Health Centre began as a humble grassroots initiative. With unwavering support from community members and local leaders, the project grew from a vision into a reality — now at the finishing stage and ready to serve.</p>
+  </section>
 
-        <label for="position">Position you are applying for</label>
-        <select id="position" required>
-          <option value="">-- Select Position --</option>
-          <option value="Clinical Officer">Clinical Officer</option>
-          <option value="Nurse">Nurse</option>
-          <option value="Administrator">Administrator</option>
-          <option value="Midwife">Midwife</option>
-        </select>
+  <section id="reports">
+    <h2>Reports</h2>
+    <p>Access our public health and project reports below:</p>
+    <ul>
+      <li><a href="reports/Annual_Report_2024.pdf" download>Annual Report 2024 (PDF)</a></li>
+      <li><a href="reports/Financial_Statement_Q1_2025.pdf" download>Financial Statement Q1 2025 (PDF)</a></li>
+    </ul>
+  </section>
 
-        <label for="about">Tell us about yourself and why you want to join</label>
-        <textarea id="about" rows="5" placeholder="Write your motivation here..." required></textarea>
-
-        <label for="cv">Upload CV (PDF/DOC/DOCX)</label>
-        <input id="cv" type="file" accept=".pdf,.doc,.docx">
-
-        <button type="submit">Submit Application</button>
-      </form>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p><strong>Location:</strong> Nabitende Subcounty, Iganga District</p>
-      <p><strong>Email:</strong> <a href="mailto:info@nawankwalehc.org">info@nawankwalehc.org</a></p>
-      <p><strong>Phone:</strong> +256 773 854 297</p>
-
-      <form onsubmit="event.preventDefault(); alert('Message sent successfully!');">
-        <h3>Send Us a Message</h3>
-        <label for="contact-name">Your Name</label>
-        <input id="contact-name" type="text" placeholder="Your Name" required>
-
-        <label for="contact-email">Your Email</label>
-        <input id="contact-email" type="email" placeholder="Your Email" required>
-
-        <label for="contact-message">Your Message</label>
-        <textarea id="contact-message" rows="4" placeholder="Your Message" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-
-      <iframe src="https://www.google.com/maps?q=Nabitende,+Uganda&output=embed" allowfullscreen></iframe>
-    </section>
-  </div>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>
+      Nawankwale C/U Community Health Centre<br>
+      Nabitende Sub county, Iganga District<br>
+      Busoga Region, Uganda<br>
+      Email: nawankwalehealthcentre@gmail.com<br>
+      Email: info@nawankwalehc.org<br>
+      Phone: +256 773854297
+    </p>
+    <p>Send us a message:</p>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Nawankwale C/U Community Health Centre. All rights reserved.</p>
-    <small>Health is Wealthy</small>
+    <p>&copy; 2025 Nawankwale C/U Community Health Centre</p>
   </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
 </body>
 </html>
