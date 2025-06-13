@@ -14,15 +14,20 @@
     }
 
     header {
+      background: #e0f5f3;
       display: flex;
       align-items: center;
-      background: #e0f5f3;
       padding: 10px 20px;
     }
 
     header img {
       height: 60px;
       margin-right: 15px;
+    }
+
+    header .title {
+      flex-grow: 1;
+      text-align: center;
     }
 
     header h1 {
@@ -109,7 +114,7 @@
 
   <header>
     <img src="logo.png" alt="Nawankwale Logo">
-    <div>
+    <div class="title">
       <h1>Nawankwale C/U Community Health Centre</h1>
       <p><em>"Health is Wealthy"</em></p>
     </div>
@@ -135,7 +140,149 @@
     <a class="button" onclick="showSection('donate')">Support Our Mission</a>
   </section>
 
-  <!-- Additional sections (about, services, outreach, team, donate, jobs, events, history, reports, contact) go here -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Nawankwale C/U Community Health Centre is a grassroots initiative located in Nabitende Sub county, Iganga District, Busoga Region, Uganda. Our mission is to provide affordable, accessible, and compassionate healthcare services to underserved communities.</p>
+    <p>The health Centre began as a community-driven project, relying heavily on local support to build a three-room structure. We have reached the shell and finishing stage but now face a financial crisis that threatens our progress.</p>
+
+    <h3>Vision</h3>
+    <p>A healthy, empowered community where every person has access to essential healthcare services.</p>
+
+    <h3>Core Values</h3>
+    <ul>
+      <li>Compassion</li>
+      <li>Integrity</li>
+      <li>Community Empowerment</li>
+      <li>Equity</li>
+      <li>Excellence</li>
+    </ul>
+
+    <h2>Our Health Centre Building</h2>
+    <img src="building.jpg" alt="Health Centre Building" style="width: 100%; max-width: 700px;">
+    <p>This is the current structure of Nawankwale C/U Community Health Centre, now at the finishing stage, constructed using community resources.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Outpatient consultations</li>
+      <li>Maternal and child health services (antenatal care, postnatal care, immunizations)</li>
+      <li>Family planning and reproductive health</li>
+      <li>Health education and awareness programs</li>
+      <li>Cancer screening</li>
+      <li>Diagnostic services</li>
+      <li>Youth friendly services</li>
+      <li>Environmental protection and climate</li>
+      <li>Epidemiological surveillance, research and reporting</li>
+      <li>Minor surgical procedures</li>
+    </ul>
+    <h3>Future Vision</h3>
+    <ul>
+      <li>Inpatient care</li>
+      <li>Maternity and delivery services</li>
+      <li>Major surgical procedures</li>
+      <li>Expanded laboratory diagnostics</li>
+    </ul>
+  </section>
+
+  <section id="outreach">
+    <h2>Outreach & Impact</h2>
+    <ul>
+      <li>School health programs: hygiene education, deworming, menstrual hygiene awareness</li>
+      <li>Community sensitization on malaria prevention, sanitation, and nutrition</li>
+      <li>Vaccination outreach in remote areas</li>
+      <li>Collaborations with local and religious leaders for health advocacy</li>
+    </ul>
+  </section>
+
+  <section id="team">
+    <h2>Our Team</h2>
+    <h3>Management Board:</h3>
+    <ul>
+      <li>Kintu Yeko – Project Initiator / Country Coordinator / Administrator</li>
+      <li>Balikitenda Paul – Nurse and In-charge of Health Centre</li>
+      <li>Batukyaye Peter – Head Community Mobilization</li>
+      <li>Kugera Ivan Edward Dhamutudha – Secretary</li>
+      <li>Annet Busoga Musekwa – Treasurer</li>
+      <li>Kyagera Annet – Member</li>
+      <li>Mudoola Moses – Assistant Head Community Mobilization</li>
+    </ul>
+    <h3>Technical Staff Present:</h3>
+    <ul>
+      <li>Kyeyala Nathan – Senior Medical Clinical Officer</li>
+      <li>Kirya Moses – Clinical Officer</li>
+    </ul>
+  </section>
+
+  <section id="donate">
+    <h2>Donate / Support Us</h2>
+    <p>Your donation will help us:</p>
+    <ul>
+      <li>Finish the health facility</li>
+      <li>Buy medical equipment and furniture</li>
+      <li>Hire and support qualified staff</li>
+      <li>Run community outreach and health programs</li>
+    </ul>
+    <p><strong>Support us through:</strong></p>
+    <ul>
+      <li>Mobile Money (MTN): +256 773854297</li>
+      <li>Bank Account: 9030006492397</li>
+    </ul>
+  </section>
+
+  <section id="jobs">
+    <h2>Jobs</h2>
+    <p>Our job opportunities are advertised through websites, media, Newspaper and interested candidate are supposed to Apply online using the form below whenever applications are called:</p>
+    <form>
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="position" placeholder="Position Applied For" required>
+      <label>Upload CV: <input type="file" name="cv" accept=".pdf,.doc,.docx" required></label><br><br>
+      <label>Upload Supporting Document: <input type="file" name="supporting_docs" accept=".pdf,.jpg,.png,.doc,.docx"></label><br><br>
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+  <section id="events">
+    <h2>Events</h2>
+    <p>Stay tuned for upcoming health campaigns, outreach activities, and community mobilization events.</p>
+  </section>
+
+  <section id="history">
+    <h2>History</h2>
+    <p>The Nawankwale C/U Community Health Centre began as a humble grassroots initiative. With unwavering support from community members and local leaders, the project grew from a vision into a reality — now at the finishing stage and ready to serve.</p>
+  </section>
+
+  <section id="reports">
+    <h2>Reports</h2>
+    <p>Click below to download project reports:</p>
+    <ul>
+      <li><a href="progress-report.pdf" target="_blank" download>📄 Progress Report</a></li>
+      <li><a href="reports/Annual_Report_2024.pdf" download>Annual Report 2024 (PDF)</a></li>
+      <li><a href="reports/Financial_Statement_Q1_2025.pdf" download>Financial Statement Q1 2025 (PDF)</a></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>
+      Nawankwale C/U Community Health Centre<br>
+      Nabitende Sub county, Iganga District<br>
+      Busoga Region, Uganda<br>
+      Email: nawankwalehealthcentre@gmail.com<br>
+      Email: info@nawankwalehc.org<br>
+      Phone: +256 773854297
+    </p>
+    <p>Send us a message:</p>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
   <footer>
     <p>&copy; 2025 Nawankwale C/U Community Health Centre</p>
